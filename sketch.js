@@ -27,10 +27,10 @@ let imgO;
 let imgStar;
 let radio = 640 / 480
 
-let waitTime = 5;
+let waitTime = 40;
 let waitTimeFuncVar;
 
-let nextStageTime = 5;
+let nextStageTime = 30;
 let nextStageTimeVar;
 
 // function preload() {
@@ -173,7 +173,7 @@ function countMovement() {
         switch (String(stage)) {
             case '0':
             case '1':
-                if (leftKnee.confidence < confidenceOffset || rightKnee.confidence < confidenceOffset) {
+                if (leftwrist.y > nose.y && rightwrist.y > nose.y) {
                     break;
                 }
                 if (rightKnee.y > leftKnee.y + poseOffset) {
